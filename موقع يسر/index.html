@@ -1,0 +1,859 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>يسر — الرئيسية</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="header-inner">
+    <!-- القسم الأيمن: الشعار + البروفايل + البحث -->
+    <div class="header-right">
+      <div class="brand">
+        <a href="#home" aria-label="الصفحة الرئيسية">يسر</a>
+      </div>
+      <button id="profileBtn" class="profile-btn" title="الملف الشخصي" aria-label="الملف الشخصي">👤</button>
+      <div class="search-wrap">
+        <input id="searchBox" placeholder="ابحث عن مادة، صف، وحدة، درس أو معلم" aria-label="بحث" />
+      </div>
+    </div>
+
+    <!-- القسم الأيسر: الروابط السريعة -->
+    <nav class="shortcuts" aria-label="الروابط السريعة">
+      <button data-target="about">من نحن</button>
+      <button data-target="grades">المراحل</button>
+      <button data-target="courses">الدورات</button>
+      <button data-target="teachers">المعلمون</button>
+      <button data-target="testimonials">آراء العملاء</button>
+      <button data-target="feedback">صندوق الاقتراحات</button>
+       <!-- رابط خارجي -->
+  <a href="https://moe.gov.sa" target="_blank" rel="noopener">وزارة التعليم</a>
+
+    </nav>
+  </div>
+</header>
+
+  <main id="home">
+    <section id="about" class="section about">
+      <div class="container">
+        <h1>من نحن</h1>
+        <p class="lead">نقدّم شروحات واضحة ومهنية للطلاب مصنفة حسب الصف والمادة، يقدمها معلمون مؤهلون. تصميمنا يركّز على سهولة القراءة وراحة العين.</p>
+        <p>ستجد أدناه الدورات مرتبة حسب الصف، ملفات تعريف المعلمين، آراء العملاء، صندوق الاقتراحات، نماذج الشكاوى والدعم، وروابط سريعة للانتقال لأي قسم.</p>
+      </div>
+    </section>
+
+    <section id="grades" class="section grades">
+      <div class="container">
+        <h2>المراحل التعليمية</h2>
+        <p class="muted">اختر المرحلة للانتقال إلى الصفوف الخاصة بها.</p>
+        <div class="levels-grid" style="margin-top:16px">
+          <div id="btnElementary" class="level-card" role="button" tabindex="0">
+            <img src="images/englishes.jpg" alt="المرحلة الابتدائية">
+            <div class="card-body">
+              <h3>المرحلة الابتدائية</h3>
+              <p class="muted">الصفوف 1 — 6</p>
+            </div>
+          </div>
+
+          <div id="btnMiddle" class="level-card" role="button" tabindex="0">
+            <img src="images/science.webp" alt="المرحلة المتوسطة">
+            <div class="card-body">
+              <h3>المرحلة المتوسطة</h3>
+              <p class="muted">المتوسط 1 — 3</p>
+            </div>
+          </div>
+
+<section id="highschool-section">
+  <div id="btnHigh" class="level-card" role="button" tabindex="0">
+    <img src="images/math.png" alt="المرحلة الثانوية">
+    <div class="card-body">
+      <h3>المرحلة الثانوية</h3>
+      <p class="muted">الثانوي 1 — 3</p>
+    </div>
+  </div>
+    <video controls width="100%">
+      <source src="videos/high school.mp4" type="video/mp4">
+      متصفحك لا يدعم تشغيل الفيديو.
+    </video>
+  </div>
+</section>
+
+
+    <section id="gradeDetailPage" class="section hidden" aria-hidden="true">
+      <div class="container">
+        <button id="gradeDetailBackBtn" class="btn-secondary">العودة للصفوف</button>
+        <h2 id="gradeDetailTitle">الصف</h2>
+        <p class="muted">اختر الفصل الدراسي:</p>
+        <div style="display:flex;gap:12px;margin-top:12px">
+          <button id="term1Btn" class="btn-primary">الفصل الأول</button>
+          <button id="term2Btn" class="btn-primary">الفصل الثاني</button>
+        </div>
+        <div id="subjectList" style="margin-top:16px"></div>
+      </div>
+    </section>
+
+    <section id="courses" class="section courses">
+      <div class="container">
+        <h2>الدورات</h2>
+        <p class="muted">تصفح حسب الصف وافتح المواد لقراءة الشروحات. استخدم مربع البحث للعثور على أي شيء بسرعة.</p>
+
+        <div class="grades-grid">
+          <article class="grade-card" data-grade="الصف الثالث متوسط">
+            <h3>الصف الثالث متوسط </h3>
+            <div class="subjects">
+              <div class="subject" data-subject="الرياضيات" data-teacher="أ. عبدالوهاب الرشيدي">
+                <button class="subject-toggle">الرياضيات</button>
+                <div class="subject-body">
+                  <p class="explanation" data-unit="الجبر" data-lesson="المعادلات الخطية">شرح واضح للمعادلات الخطية مع أمثلة محلولة ونصائح للممارسة.</p>
+                  <p class="meta">المعلم: <span class="teacher">أ. عبدالوهاب الرشيدي</span></p>
+                </div>
+              </div>
+
+              <div class="subject" data-subject="الأحياء" data-teacher="أ. ابراهيم الشهراني">
+                <button class="subject-toggle">الأحياء</button>
+                <div class="subject-body">
+                  <p class="explanation" data-unit="علم الخلايا" data-lesson="تركيب الخلية">شرح تركيب الخلية بطريقة بسيطة مع رسوم توضيحية وملاحظات للمذاكرة.</p>
+                  <p class="meta">المعلم: <span class="teacher">أ. ابراهيم الشهراني</span></p>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="grade-card" data-grade="الصف الأول ثانوي">
+            <h3>الصف الأول ثانوي </h3>
+            <div class="subjects">
+              <div class="subject" data-subject="الفيزياء" data-teacher="أ. عبدالله الحربي">
+                <button class="subject-toggle">الفيزياء</button>
+                <div class="subject-body">
+                  <p class="explanation" data-unit="الميكانيكا" data-lesson="قوانين نيوتن">شرح قوانين نيوتن مع أمثلة من الحياة اليومية ومسائل خطوة بخطوة.</p>
+                  <p class="meta">المعلم: <span class="teacher">أ. عبدالله الحربي</span></p>
+                </div>
+              </div>
+
+              <div class="subject" data-subject="الكيمياء" data-teacher="أ. عبدالله العازمي">
+                <button class="subject-toggle">الكيمياء</button>
+                <div class="subject-body">
+                  <p class="explanation" data-unit="بنية الذرة" data-lesson="توزيع الإلكترونات">شرح مبسّط لنماذج الذرة وتوزيع الإلكترونات.</p>
+                  <p class="meta">المعلم: <span class="teacher">أ. عبدالله العازمي</span></p>
+                </div>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <div class="photos">
+          
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <section id="teachers" class="section teachers">
+      <div class="container">
+        <h2>المعلمون المتميزون</h2>
+        <div class="teachers-grid">
+          <div class="teacher-card" data-teacher="أ. عبدالوهاب الرشيدي">
+            <img src="images/maths.jpeg" alt="أ. عبدالوهاب الرشيدي">
+            <h3>أ. عبدالوهاب الرشيدي</h3>
+            <p>معلم رياضيات خبير بأساليب عملية لحل المسائل.</p>
+          </div>
+
+          <div class="teacher-card" data-teacher="أ. ابراهيم الشهراني">
+            <img src="images/biology.png" alt="أ. ابراهيم الشهراني">
+            <h3>أ. ابراهيم الشهراني</h3>
+            <p>أخصائي أحياء يركز على الرسوم التوضيحية والتعلم النشط.</p>
+          </div>
+
+          <div class="teacher-card" data-teacher="أ. عبدالله الحربي">
+            <img src="images/einestien.jpg" alt="أ. عبدالله الحربي">
+            <h3>أ. عبدالله الحربي</h3>
+            <p>مدرّس فيزياء يستخدم أمثلة وتجارب من الواقع.</p>
+          </div>
+
+          <div class="teacher-card" data-teacher="أ. عبدالله العازمي">
+            <img src="images/chemistry.jpg" alt="أ. عبدالله العازمي">
+            <h3>أ. عبدالله العازمي</h3>
+            <p>متخصص كيمياء يقدّم شروحات علمية واضحة وسهلة الفهم.</p>
+          </div>
+
+          <div class="teacher-card" data-teacher="أ.دخيل الله الحربي">
+            <img src="images/cpu.avif" alt="أ.دخيل الله الحربي">
+            <h3>أ.دخيل الله الحربي</h3>
+            <p>متخصص حاسب آلي يقدّم شروحات عملية وتقنيات برمجية مبسطة.</p>
+          </div>
+
+          <div class="teacher-card" data-teacher="أ. محمد النوشان">
+            <img src="images/arabic.webp" alt="أ. محمد النوشان">
+            <h3>أ. محمد النوشان</h3>
+            <p>معلم لغة عربية متخصص في تعليم القواعد والنصوص الأدبية بطريقة مبسطة.</p>
+          </div>
+
+          <div class="teacher-card" data-teacher="أ. علي النوشان">
+            <img src="images/quran.jpg" alt="أ. علي النوشان">
+            <h3>أ. علي النوشان</h3>
+            <p>متخصص الدراسات الإسلامية والقرآن الكريم بشرح واضح ومتدرج.</p>
+          </div>
+
+          <div class="teacher-card" data-teacher="أ. عبدالرحمن الفرحان">
+            <img src="images/english.jpg" alt="أ. عبدالرحمن الفرحان">
+            <h3>أ. عبدالرحمن الفرحان</h3>
+            <p>معلم لغة  إنجليزية يركز على المحادثة والقواعد بطريقة عملية.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="testimonials" class="section testimonials">
+      <div class="container">
+        <h2>آراء العملاء</h2>
+        <div class="testimonial-carousel">
+          <div class="carousel-track" id="carouselTrack">
+            <div class="carousel-slide">
+              <div class="testimonial-card-carousel">
+                <div class="testimonial-card-header">
+                  <img src="https://picsum.photos/seed/parent1/100/100" alt="خالد الفايز" class="testimonial-pic-carousel">
+                  <h3 class="testimonial-author-carousel">خالد الفايز</h3>
+                </div>
+                <p class="testimonial-quote-carousel">«الدروس واضحة وتحسّن طفلي بسرعة.»</p>
+              </div>
+            </div>
+            <div class="carousel-slide">
+              <div class="testimonial-card-carousel">
+                <div class="testimonial-card-header">
+                  <img src="https://picsum.photos/seed/student1/100/100" alt="محمد المطيري" class="testimonial-pic-carousel">
+                  <h3 class="testimonial-author-carousel">محمد المطيري</h3>
+                </div>
+                <p class="testimonial-quote-carousel">«ياخي أشتي ابوس راس اللي سوا الموقع.»</p>
+              </div>
+            </div>
+            <div class="carousel-slide">
+              <div class="testimonial-card-carousel">
+                <div class="testimonial-card-header">
+                  <img src="https://picsum.photos/seed/parent2/100/100" alt="حسام الخضير" class="testimonial-pic-carousel">
+                  <h3 class="testimonial-author-carousel">حسام الخضير</h3>
+                </div>
+                <p class="testimonial-quote-carousel">«دعم سريع ومعلمون متفانون.»</p>
+              </div>
+            </div>
+            <div class="carousel-slide">
+              <div class="testimonial-card-carousel">
+                <div class="testimonial-card-header">
+                  <img src="https://picsum.photos/seed/teacher1/100/100" alt="مرتضى محمود" class="testimonial-pic-carousel">
+                  <h3 class="testimonial-author-carousel">مرتضى محمود</h3>
+                </div>
+                <p class="testimonial-quote-carousel">«صراحة الموقع عجبني كتير مبحسن ازاكر بدونه.»</p>
+              </div>
+            </div>
+            <div class="carousel-slide">
+              <div class="testimonial-card-carousel">
+                <div class="testimonial-card-header">
+                  <img src="https://picsum.photos/seed/student2/100/100" alt="عبدالملك القريشي" class="testimonial-pic-carousel">
+                  <h3 class="testimonial-author-carousel">عبدالملك القريشي</h3>
+                </div>
+                <p class="testimonial-quote-carousel">«ساعدني هذا الموقع كثيراً في تحسين درجاتي.»</p>
+              </div>
+            </div>
+            <div class="carousel-slide">
+              <div class="testimonial-card-carousel">
+                <div class="testimonial-card-header">
+                  <img src="https://picsum.photos/seed/parent3/100/100" alt="حمد الطاسان" class="testimonial-pic-carousel">
+                  <h3 class="testimonial-author-carousel">حمد الطاسان</h3>
+                </div>
+                <p class="testimonial-quote-carousel">«معلمون متخصصون وأسعار معقولة جداً.»</p>
+              </div>
+            </div>
+            <div class="carousel-slide">
+              <div class="testimonial-card-carousel">
+                <div class="testimonial-card-header">
+                  <img src="https://picsum.photos/seed/student3/100/100" alt="ابراهيم قشير" class="testimonial-pic-carousel">
+                  <h3 class="testimonial-author-carousel">ابراهيم قشير</h3>
+                </div>
+                <p class="testimonial-quote-carousel">«موقع قامد أوي.»</p>
+              </div>
+            </div>
+            <div class="carousel-slide">
+              <div class="testimonial-card-carousel">
+                <div class="testimonial-card-header">
+                  <img src="https://picsum.photos/seed/parent4/100/100" alt="عبدالحكيم" class="testimonial-pic-carousel">
+                  <h3 class="testimonial-author-carousel">عبدالحكيم</h3>
+                </div>
+                <p class="testimonial-quote-carousel">«موقع صج عجيب.»</p>
+              </div>
+            </div>
+            <div class="carousel-slide">
+              <div class="testimonial-card-carousel">
+                <div class="testimonial-card-header">
+                  <img src="https://picsum.photos/seed/student4/100/100" alt="جاسم شلال" class="testimonial-pic-carousel">
+                  <h3 class="testimonial-author-carousel">جاسم شلال</h3>
+                </div>
+                <p class="testimonial-quote-carousel">«والله الموقع حيل قوي.»</p>
+              </div>
+            </div>
+          </div>
+          <button class="carousel-prev" id="carouselPrev" aria-label="السابق">◀</button>
+          <button class="carousel-next" id="carouselNext" aria-label="التالي">▶</button>
+        </div>
+      </div>
+    </section>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="feedback" class="section feedback">
+      <div class="container">
+        <h2>صندوق الشكاوي والاقتراحات</h2>
+        <form id="suggestionForm">
+          <label for="sName">الاسم</label>
+          <input id="sName" required />
+
+          <label for="sType">النوع</label>
+          <select id="sType">
+            <option>اقتراح</option>
+            <option>شكوى</option>
+            <option>دعم</option>
+          </select>
+
+          <label for="sMessage">الرسالة</label>
+          <textarea id="sMessage" rows="5" required></textarea>
+
+          <label for="sFile">إرفاق ملف (اختياري)</label>
+          <input id="sFile" type="file" />
+
+          <button type="submit">إرسال</button>
+          <p id="sResult" class="muted"></p>
+        </form>
+      </div>
+    </section>
+
+    <section id="support" class="section support">
+      <div class="container">
+       
+      </div>
+    </section>
+
+  </main>
+
+  <div class="profile-page" id="profilePage">
+    <div class="profile-header">
+      <h2>حسابي</h2>
+    </div>
+    <div class="profile-body">
+      <div class="profile-card">
+        <img src="https://picsum.photos/seed/profile/100/100" alt="صورة البروفايل" class="profile-pic">
+        <h3 class="profile-name">تميم العقلاء</h3>
+        <p class="profile-email">tamimoqla@gmail.com</p>
+      </div>
+
+      <div class="account-menu-item" onclick="openSettings('profile')">
+        <h3>👤 ملفي الشخصي</h3>
+        <p>بياناتي الشخصية ومعلوماتي الاسم والبريد.</p>
+      </div>
+
+      <div class="account-menu-item" onclick="openSettings('security')">
+        <h3>🔒 الخصوصية</h3>
+        <p>إدارة عرض البيانات ومن يستطيع رؤية معلوماتي.</p>
+      </div>
+
+      <div class="account-menu-item" onclick="openSettings('billing')">
+        <h3>🔔 الدفع والفواتير</h3>
+        <p>إدارة طرق الدفع وسجل المشتريات.</p>
+      </div>
+
+      <div class="account-menu-item" onclick="openSettings('notifications')">
+        <h3>🔎 الحساب والأمان</h3>
+        <p>بيانات تسجيل الدخول ومعلومات الأمان.</p>
+      </div>
+
+      <div class="account-menu-item" onclick="openSettings('learning')">
+        <h3>🌘 المظهر والمظهر</h3>
+        <p>اختر بين المظهر الفاتح أو الداكن.</p>
+      </div>
+
+      <div class="account-menu-item" onclick="openSettings('notifications')">
+        <h3>📄 الإعلامات</h3>
+        <p>التحكم في الإعلامات والرسالات البريدية.</p>
+      </div>
+
+      <div class="account-menu-item logout">
+        <h3 id="logoutBtn">🚪 تسجيل خروج</h3>
+      </div>
+    </div>
+  </div>
+
+  <div class="profile-page" id="profilePageOld">
+    <div class="profile-header">
+      <h2>ملفي الشخصي</h2>
+    </div>
+    <div class="profile-body">
+      <div class="profile-content">
+        <img src="https://picsum.photos/seed/profile/120/120" alt="صورة الملف الشخصي" class="profile-pic">
+        <h3 class="profile-name">تميم العقلاء</h3>
+        <p class="profile-email">tamimoqla@gmail.com</p>
+        
+        <div class="profile-section">
+          <h4>معلومات المستخدم</h4>
+          <p><strong>الجنس:</strong> ذكر</p>
+          <p><strong>المرحلة الدراسية:</strong> الصف التاسع</p>
+          <p><strong>تاريخ الانضمام:</strong> 2025-01-15</p>
+        </div>
+        
+        <div class="profile-section">
+          <h4>الدورات المسجلة</h4>
+          <p>الرياضيات، الفيزياء، الأحياء</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="settings-page" id="settingsPage">
+    <div class="settings-container">
+      <!-- Sidebar Navigation -->
+      <aside class="settings-sidebar">
+        <h2 class="settings-title">الإعدادات</h2>
+        <nav class="settings-nav">
+          <button class="settings-nav-item active" data-section="profile">👤 معلومات الملف الشخصي</button>
+          <button class="settings-nav-item" data-section="security">🔒 الأمان وتسجيل الدخول</button>
+          <button class="settings-nav-item" data-section="notifications">🔔 الإشعارات</button>
+          <button class="settings-nav-item" data-section="language">🌐 اللغة والمنطقة</button>
+          <button class="settings-nav-item" data-section="learning">🎓 تفضيلات التعلم</button>
+          <button class="settings-nav-item" data-section="billing">💳 الفواتير والدفع</button>
+          <button class="settings-nav-item" data-section="privacy">🔐 الخصوصية والمراسلة</button>
+        </nav>
+      </aside>
+
+      <!-- Main Content Panel -->
+      <div class="settings-content">
+        <!-- Profile Information Section -->
+        <section class="settings-panel active" id="profile">
+          <h3>معلومات الملف الشخصي</h3>
+          <div class="settings-form">
+            <div class="form-group">
+              <label>الصورة الشخصية</label>
+              <div class="profile-pic-upload">
+                <img src="https://picsum.photos/seed/profile/120/120" alt="صورة البروفايل" id="profilePicPreview" class="pic-preview">
+                <input type="file" id="profilePicInput" accept="image/*" style="display:none">
+                <button type="button" class="btn-upload" onclick="document.getElementById('profilePicInput').click()">تغيير الصورة</button>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="fullName">الاسم الكامل</label>
+              <input type="text" id="fullName" value="محمد أحمد" placeholder="الاسم الكامل">
+            </div>
+
+            <div class="form-group">
+              <label for="email">البريد الإلكتروني</label>
+              <input type="email" id="email" value="student@example.com" placeholder="البريد الإلكتروني">
+            </div>
+
+            <div class="form-group">
+              <label for="username">اسم المستخدم</label>
+              <input type="text" id="username" value="mohammed_ahmed" placeholder="اسم المستخدم">
+            </div>
+
+            <div class="form-group">
+              <label for="phone">رقم الهاتف</label>
+              <input type="tel" id="phone" value="+966 50 123 4567" placeholder="رقم الهاتف">
+            </div>
+
+            <div class="form-group">
+              <label for="bio">السيرة الذاتية</label>
+              <textarea id="bio" rows="3" placeholder="أخبرنا عن نفسك...">طالب مجتهد يحب الرياضيات والعلوم</textarea>
+            </div>
+
+            <button class="btn-primary" onclick="saveSettings('profile')">حفظ التغييرات</button>
+          </div>
+        </section>
+
+        <!-- Security & Login Section -->
+        <section class="settings-panel" id="security">
+          <h3>الأمان وتسجيل الدخول</h3>
+          <div class="settings-form">
+            <div class="form-group">
+              <label for="currentPassword">كلمة المرور الحالية</label>
+              <input type="password" id="currentPassword" placeholder="أدخل كلمة المرور الحالية">
+            </div>
+
+            <div class="form-group">
+              <label for="newPassword">كلمة المرور الجديدة</label>
+              <input type="password" id="newPassword" placeholder="أدخل كلمة مرور جديدة">
+            </div>
+
+            <div class="form-group">
+              <label for="confirmPassword">تأكيد كلمة المرور</label>
+              <input type="password" id="confirmPassword" placeholder="أدخل كلمة المرور مرة أخرى">
+            </div>
+
+            <button class="btn-primary" onclick="saveSettings('security')">تحديث كلمة المرور</button>
+
+            <hr style="margin: 20px 0; border: none; border-top: 1px solid #e0e0e0;">
+
+            <div class="form-group">
+              <label class="toggle-label">
+                <input type="checkbox" id="twoFactorAuth" class="toggle-checkbox">
+                <span class="toggle-slider"></span>
+                المصادقة الثنائية (2FA)
+              </label>
+              <p class="meta">يزيد أمان حسابك بطلب رمز التحقق عند تسجيل الدخول</p>
+            </div>
+
+            <h4 style="margin-top: 20px; margin-bottom: 10px;">سجل الأجهزة</h4>
+            <div class="device-list">
+              <div class="device-item">
+                <span class="device-icon">💻</span>
+                <div class="device-info">
+                  <p class="device-name">كمبيوتر - Windows</p>
+                  <p class="device-meta">آخر نشاط: اليوم الساعة 2:30 م</p>
+                </div>
+                <button class="btn-small" onclick="removeDevice(this)">حذف</button>
+              </div>
+              <div class="device-item">
+                <span class="device-icon">📱</span>
+                <div class="device-info">
+                  <p class="device-name">هاتف ذكي - iPhone</p>
+                  <p class="device-meta">آخر نشاط: أمس الساعة 5:15 م</p>
+                </div>
+                <button class="btn-small" onclick="removeDevice(this)">حذف</button>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Notifications Section -->
+        <section class="settings-panel" id="notifications">
+          <h3>الإشعارات</h3>
+          <div class="settings-form">
+            <h4>إشعارات البريد الإلكتروني</h4>
+            <div class="form-group">
+              <label class="toggle-label">
+                <input type="checkbox" id="emailCourseUpdates" class="toggle-checkbox" checked>
+                <span class="toggle-slider"></span>
+                تحديثات الدورات والدروس الجديدة
+              </label>
+            </div>
+
+            <div class="form-group">
+              <label class="toggle-label">
+                <input type="checkbox" id="emailGrades" class="toggle-checkbox" checked>
+                <span class="toggle-slider"></span>
+                إشعارات الدرجات والتقييمات
+              </label>
+            </div>
+
+            <div class="form-group">
+              <label class="toggle-label">
+                <input type="checkbox" id="emailMessages" class="toggle-checkbox" checked>
+                <span class="toggle-slider"></span>
+                الرسائل من المعلمين
+              </label>
+            </div>
+
+            <div class="form-group">
+              <label class="toggle-label">
+                <input type="checkbox" id="emailPromo" class="toggle-checkbox">
+                <span class="toggle-slider"></span>
+                العروض والتخفيفات الخاصة
+              </label>
+            </div>
+
+            <hr style="margin: 20px 0; border: none; border-top: 1px solid #e0e0e0;">
+
+            <h4>إشعارات الجهاز</h4>
+            <div class="form-group">
+              <label class="toggle-label">
+                <input type="checkbox" id="pushNotifications" class="toggle-checkbox" checked>
+                <span class="toggle-slider"></span>
+                تفعيل إشعارات الدفع
+              </label>
+            </div>
+
+            <div class="form-group">
+              <label class="toggle-label">
+                <input type="checkbox" id="soundNotifications" class="toggle-checkbox" checked>
+                <span class="toggle-slider"></span>
+                تصوت الإشعارات
+              </label>
+            </div>
+
+            <div class="form-group">
+              <label class="toggle-label">
+                <input type="checkbox" id="vibration" class="toggle-checkbox" checked>
+                <span class="toggle-slider"></span>
+                اهتزاز الجهاز
+              </label>
+            </div>
+
+            <button class="btn-primary" onclick="saveSettings('notifications')">حفظ الإشعارات</button>
+          </div>
+        </section>
+
+        <!-- Language & Region Section -->
+        <section class="settings-panel" id="language">
+          <h3>اللغة والمنطقة</h3>
+          <div class="settings-form">
+            <div class="form-group">
+              <label for="language">اللغة</label>
+              <select id="language">
+                <option value="ar" selected>العربية</option>
+                <option value="en">English</option>
+                <option value="fr">Français</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="timezone">المنطقة الزمنية</label>
+              <select id="timezone">
+                <option value="GMT+3" selected>GMT+3 (توقيت السعودية)</option>
+                <option value="GMT+2">GMT+2 (توقيت الخليج)</option>
+                <option value="GMT+1">GMT+1 (توقيت وسط أوروبا)</option>
+                <option value="GMT">GMT (توقيت جرينتش)</option>
+                <option value="GMT-5">GMT-5 (التوقيت الشرقي)</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="dateFormat">تنسيق التاريخ</label>
+              <select id="dateFormat">
+                <option value="dd/mm/yyyy" selected>DD/MM/YYYY</option>
+                <option value="mm/dd/yyyy">MM/DD/YYYY</option>
+                <option value="yyyy-mm-dd">YYYY-MM-DD</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label class="toggle-label">
+                <input type="checkbox" id="autoTranslate" class="toggle-checkbox">
+                <span class="toggle-slider"></span>
+                الترجمة التلقائية للمحتوى
+              </label>
+            </div>
+
+            <button class="btn-primary" onclick="saveSettings('language')">حفظ التغييرات</button>
+          </div>
+        </section>
+
+        <!-- Learning Preferences Section -->
+        <section class="settings-panel" id="learning">
+          <h3>تفضيلات التعلم</h3>
+          <div class="settings-form">
+            <div class="form-group">
+              <label for="videoQuality">جودة الفيديو</label>
+              <select id="videoQuality">
+                <option value="auto" selected>تلقائي</option>
+                <option value="1080p">1080p (Full HD)</option>
+                <option value="720p">720p (HD)</option>
+                <option value="480p">480p (SD)</option>
+                <option value="240p">240p (موفر بيانات)</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label class="toggle-label">
+                <input type="checkbox" id="autoPlayNext" class="toggle-checkbox" checked>
+                <span class="toggle-slider"></span>
+                تشغيل الدرس التالي تلقائيًا
+              </label>
+            </div>
+
+            <div class="form-group">
+              <label class="toggle-label">
+                <input type="checkbox" id="subtitles" class="toggle-checkbox" checked>
+                <span class="toggle-slider"></span>
+                تفعيل الترجمة (الترجمة النصية)
+              </label>
+            </div>
+
+            <div class="form-group">
+              <label for="subtitleLanguage">لغة الترجمة</label>
+              <select id="subtitleLanguage">
+                <option value="ar" selected>العربية</option>
+                <option value="en">English</option>
+                <option value="auto">تلقائي</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label class="toggle-label">
+                <input type="checkbox" id="playbackSpeed" class="toggle-checkbox" checked>
+                <span class="toggle-slider"></span>
+                السماح بتغيير سرعة التشغيل
+              </label>
+            </div>
+
+            <div class="form-group">
+              <label for="defaultSpeed">سرعة التشغيل الافتراضية</label>
+              <select id="defaultSpeed">
+                <option value="0.75">0.75x (أبطأ)</option>
+                <option value="1" selected>1x (عادي)</option>
+                <option value="1.25">1.25x</option>
+                <option value="1.5">1.5x (أسرع)</option>
+                <option value="2">2x (الأسرع)</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label class="toggle-label">
+                <input type="checkbox" id="darkMode" class="toggle-checkbox">
+                <span class="toggle-slider"></span>
+                المضهر الداكن
+              </label>
+            </div>
+
+            <button class="btn-primary" onclick="saveSettings('learning')">حفظ التفضيلات</button>
+          </div>
+        </section>
+
+        <!-- Billing & Payments Section -->
+        <section class="settings-panel" id="billing">
+          <h3>الفواتير والدفع</h3>
+          <div class="settings-form">
+            <h4>طرق الدفع</h4>
+            <div class="payment-methods">
+              <div class="payment-card">
+                <span class="card-icon">💳</span>
+                <div class="card-info">
+                  <p class="card-name">بطاقة ائتمان</p>
+                  <p class="card-number">**** **** **** 4242</p>
+                </div>
+                <button class="btn-small" onclick="editPaymentMethod(this)">تعديل</button>
+              </div>
+              <div class="payment-card">
+                <span class="card-icon">🏦</span>
+                <div class="card-info">
+                  <p class="card-name">التحويل البنكي</p>
+                  <p class="card-number">IBAN: SA00 1234 5678 9012 3456</p>
+                </div>
+                <button class="btn-small" onclick="removePaymentMethod(this)">حذف</button>
+              </div>
+            </div>
+
+            <button class="btn-secondary" onclick="addPaymentMethod()">+ إضافة طريقة دفع</button>
+
+            <hr style="margin: 20px 0; border: none; border-top: 1px solid #e0e0e0;">
+
+            <h4>سجل المشتريات</h4>
+            <div class="purchase-history">
+              <div class="purchase-item">
+                <div class="purchase-info">
+                  <p class="purchase-title">اشتراك سنوي - خطة برو</p>
+                  <p class="purchase-date">2024-12-01</p>
+                </div>
+                <div class="purchase-amount">500 ر.س</div>
+              </div>
+              <div class="purchase-item">
+                <div class="purchase-info">
+                  <p class="purchase-title">دورة الرياضيات المتقدمة</p>
+                  <p class="purchase-date">2024-11-15</p>
+                </div>
+                <div class="purchase-amount">150 ر.س</div>
+              </div>
+              <div class="purchase-item">
+                <div class="purchase-info">
+                  <p class="purchase-title">حزمة الفيزياء الشاملة</p>
+                  <p class="purchase-date">2024-10-20</p>
+                </div>
+                <div class="purchase-amount">200 ر.س</div>
+              </div>
+            </div>
+
+            <button class="btn-secondary" onclick="downloadInvoice()">📥 تحميل الفواتير</button>
+          </div>
+        </section>
+
+        <!-- Privacy & Messaging Section -->
+        <section class="settings-panel" id="privacy">
+          <h3>الخصوصية والمراسلة</h3>
+          <div class="settings-form">
+            <h4>من يستطيع التواصل معي؟</h4>
+            <div class="form-group">
+              <label class="toggle-label">
+                <input type="checkbox" id="allowAnyoneMessage" class="toggle-checkbox" checked>
+                <span class="toggle-slider"></span>
+                الجميع
+              </label>
+            </div>
+
+            <div class="form-group">
+              <label class="toggle-label">
+                <input type="checkbox" id="allowTeachersOnly" class="toggle-checkbox">
+                <span class="toggle-slider"></span>
+                المعلمون فقط
+              </label>
+            </div>
+
+            <div class="form-group">
+              <label class="toggle-label">
+                <input type="checkbox" id="blockMessages" class="toggle-checkbox">
+                <span class="toggle-slider"></span>
+                منع الرسائل من الجميع
+              </label>
+            </div>
+
+            <hr style="margin: 20px 0; border: none; border-top: 1px solid #e0e0e0;">
+
+            <h4>حالة الاتصال</h4>
+            <div class="form-group">
+              <label class="toggle-label">
+                <input type="checkbox" id="showOnlineStatus" class="toggle-checkbox" checked>
+                <span class="toggle-slider"></span>
+                إظهار حالة الاتصال (متصل/غير متصل)
+              </label>
+            </div>
+
+            <div class="form-group">
+              <label class="toggle-label">
+                <input type="checkbox" id="showLastSeen" class="toggle-checkbox" checked>
+                <span class="toggle-slider"></span>
+                إظهار آخر مرة اتصال
+              </label>
+            </div>
+
+            <hr style="margin: 20px 0; border: none; border-top: 1px solid #e0e0e0;">
+
+            <h4>الخصوصية</h4>
+            <div class="form-group">
+              <label class="toggle-label">
+                <input type="checkbox" id="publicProfile" class="toggle-checkbox" checked>
+                <span class="toggle-slider"></span>
+                جعل ملفي الشخصي عام
+              </label>
+            </div>
+
+            <div class="form-group">
+              <label class="toggle-label">
+                <input type="checkbox" id="showProgress" class="toggle-checkbox" checked>
+                <span class="toggle-slider"></span>
+                إظهار تقدم الدورات
+              </label>
+            </div>
+
+            <button class="btn-primary" onclick="saveSettings('privacy')">حفظ إعدادات الخصوصية</button>
+          </div>
+        </section>
+      </div>
+    </div>
+  </div>
+
+  <footer class="site-footer">
+    <div class="container">
+      <small>© يسر — تصميم مريح ومحترف للمذاكرة.</small>
+      <ul>
+        <li>تم</li>
+        <li>انشاء</li>
+        <li>الموقع</li>
+        <li>بواسطة</li>
+        <li>تميم</li>
+        <li>العقلاء</li>
+        <h1>حفظه الله ورعاه وأطال بعمره</h1>
+        <h2>ووفقه ورزقه</h2>
+        <h3>وجعل مثواه الجنة</h3>
+      </ul>
+    </div>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>
